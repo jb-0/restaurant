@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: "Italian Restaurant",
@@ -6,8 +8,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "EQRtnAKzM55lTJFcoT3KjI2A7lZsNw-xlKBkwzUyK4k",
-        spaceId: "cxvvhkxf8v3j",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
   ],
