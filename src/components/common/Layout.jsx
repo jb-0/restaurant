@@ -1,12 +1,13 @@
 import React from 'react'
 import Nav from './Nav'
 import { Link } from 'gatsby'
+import layoutStyles from './Layout.module.css'
 
 export default function Layout({ children }) {
   return (
     <>
       <Nav />
-      <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+      <div className={layoutStyles.bodyContainer}>
         {children}
       </div>
     </>
