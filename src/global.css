@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
+:root {
+  --main-bg-color: #f9f6f6;
+  --main-font-color: #495057;
+  --secondary-font-color: #ee6c4d;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,12 +13,20 @@
 body {
   font-family: 'Italiana', serif;
   margin: 0;
+  color: var(--main-font-color);
+  background-color: var(--main-bg-color);
 }
 
 h1 {
   font-size: 3rem;
+  color: var(--secondary-font-color);
 }
 
 p, a {
   font-size: 1.5rem;
+  color: var(--main-font-color);
+}
+
+a:hover {
+  color: var(--secondary-font-color);
 }
