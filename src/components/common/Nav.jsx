@@ -4,12 +4,12 @@ import navStyles from './Nav.module.css';
 
 export default function Nav() {
   return (
-    <nav>
+    <nav className={navStyles.nav}>
       <ul>
-        <Link className={navStyles.navLink} to="/">Home</Link>
-        <Link className={navStyles.navLink} to="/about/">Locations</Link>
-        <Link className={navStyles.navLink} to="/contact/">Menu</Link>
-        <Link className={navStyles.navLink} to="/contact/">Order</Link>
+        <Link className={navStyles.navLink} to="/">HOME</Link>
+        <Link className={navStyles.navLink} to="/about/">LOCATIONS</Link>
+        <Link className={navStyles.navLink} to="/contact/">MENU</Link>
+        <Link className={navStyles.navLink} to="/contact/">ORDER</Link>
       </ul>
     </nav>
   )
