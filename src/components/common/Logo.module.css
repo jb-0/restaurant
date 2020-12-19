@@ -1,0 +1,18 @@
+.logoContainer {
+  display: inline-block;
+}
+
+.logo {
+  border: dotted 7px;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 24px;
+  text-align: center;
+}

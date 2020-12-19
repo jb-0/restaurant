@@ -6,6 +6,5 @@
 }
 
 .navLink {
-  display: inline-block;
-  margin-right: 1rem;
+  margin: 0 1rem;
 }
