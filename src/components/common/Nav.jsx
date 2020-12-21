@@ -14,7 +14,6 @@ export default function Nav() {
       window.addEventListener('scroll', handleScroll, { passive: true });
 
       return () => {
-        console.log('cleanup');
           window.removeEventListener('scroll', handleScroll);
       };
   }, []);
