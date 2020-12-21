@@ -24,7 +24,7 @@ export default function Nav() {
       <Link className={navStyles.navLink} to="/order/">ORDER</Link>
       <Link className={navStyles.navLogo} to="/"><Logo /></Link>
       <Link className={navStyles.navLink} to="/locations/">LOCATIONS</Link>
-      <Link className={navStyles.navLink} to="/recipes/">RECIPES</Link>
+      <Link className={navStyles.navLink} to="/blog/">BLOG</Link>
     </nav>
   )
 }
