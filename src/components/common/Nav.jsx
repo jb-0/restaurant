@@ -22,9 +22,9 @@ export default function Nav() {
     <nav className={`${navStyles.nav} ${scrollPosition > 60 ? navStyles.navCollapse : null}`}>
       <Link className={navStyles.navLink} to="/menu/">MENU</Link>
       <Link className={navStyles.navLink} to="/order/">ORDER</Link>
-      <span className={navStyles.navLogo}><Logo /></span>
+      <Link className={navStyles.navLogo} to="/"><Logo /></Link>
       <Link className={navStyles.navLink} to="/locations/">LOCATIONS</Link>
-      <Link className={navStyles.navLink} to="/">RECIPES</Link>
+      <Link className={navStyles.navLink} to="/recipes/">RECIPES</Link>
     </nav>
   )
 }
