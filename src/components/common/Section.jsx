@@ -4,12 +4,13 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 export default function Section(props) {
   return (
-    <div key={props.node.section} className="section">
+    <div key={props.node.section} className={sectionStyles.section}>
       <div>
         <img className={sectionStyles.sectionImage} src={props.node.image.file.url} alt={props.node.image.description} />
         <h1>{props.node.heading}</h1>
         <h2>{props.node.subHeading}</h2>
         {documentToReactComponents(JSON.parse(props.node.detail.raw))}
+        <hr></hr>
       </div>
     </div>
   )
