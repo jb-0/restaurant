@@ -7,7 +7,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       {data.allContentfulHome.nodes.map(node => {
-        return <Section node={node} />
+        return <Section key={node.section} node={node} />
       })}
     </Layout>
   )
