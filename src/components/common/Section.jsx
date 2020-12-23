@@ -1,8 +1,15 @@
 import React from 'react'
 import sectionStyles from './Section.module.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { MARKS } from '@contentful/rich-text-types'
 
 export default function Section(props) {
+  const options = {
+    renderMark: {
+      [MARKS.CODE]: text => <div dangerouslySetInnerHTML={{ __html: text }} />,
+    },
+  }
+
   return (
     <>
       <div key={props.node.section} className={sectionStyles.section}>
@@ -20,10 +27,13 @@ export default function Section(props) {
         }
         <div className={sectionStyles.subSection}>
           {/* To allow full flexibility all fields are conditional so they are not mandated */}
-          <h1>{props.node.heading ? props.node.heading : null}</h1>
-          <h2>{props.node.subHeading ? props.node.subHeading : null}</h2>
-          {props.node.detail.raw
-            ? documentToReactComponents(JSON.parse(props.node.detail.raw))
+          <h1>{props.node.heading != 0 ? props.node.heading : null}</h1>
+          <h2>{props.node.subHeading != 0 ? props.node.subHeading : null}</h2>
+          {props.node.detail.raw != 0
+            ? documentToReactComponents(
+                JSON.parse(props.node.detail.raw),
+                options
+              )
             : null}
         </div>
       </div>

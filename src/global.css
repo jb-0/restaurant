@@ -36,3 +36,25 @@ hr {
   border: dashed 2px;
   margin: 20px 0;
 }
+
+button {
+  font-size: 1.5rem;
+  font: inherit;
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  text-transform: uppercase;
+  transition: background-color 0.2s linear;
+}
+
+button:hover {
+  background-color: var(--secondary-font-color);
+  transition: background-color 0.2s linear;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: 0;
+}
