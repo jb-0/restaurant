@@ -24,14 +24,20 @@
 .navLink {
   margin: 0 1rem;
   width: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.navLinkLeft {
+  text-align: right;
+}
+
+.navLinkRight {
+  text-align: left;
 }
 
 .navLogo {
   transition: transform 0.4s;
   transform: scale(1);
+  margin: 0 30px;
 }
 
 .navCollapse .navLogo {

@@ -20,11 +20,11 @@ export default function Nav() {
 
   return (
     <nav className={`${navStyles.nav} ${scrollPosition > 60 ? navStyles.navCollapse : null}`}>
-      <Link className={navStyles.navLink} to="/menu/">MENU</Link>
-      <Link className={navStyles.navLink} to="/order/">ORDER</Link>
+      <Link className={`${navStyles.navLink} ${navStyles.navLinkLeft}`} to="/menu/">MENU</Link>
+      <Link className={`${navStyles.navLink} ${navStyles.navLinkLeft}`} to="/order/">ORDER</Link>
       <Link className={navStyles.navLogo} to="/"><Logo /></Link>
-      <Link className={navStyles.navLink} to="/locations/">LOCATIONS</Link>
-      <Link className={navStyles.navLink} to="/blog/">BLOG</Link>
+      <Link className={`${navStyles.navLink} ${navStyles.navLinkRight}`} to="/locations/">LOCATIONS</Link>
+      <Link className={`${navStyles.navLink} ${navStyles.navLinkRight}`} to="/blog/">BLOG</Link>
     </nav>
   )
 }
