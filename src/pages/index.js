@@ -4,9 +4,11 @@ import Layout from '../components/common/Layout'
 import Section from '../components/common/Section'
 
 const IndexPage = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
-      {data.allContentfulHome.nodes.map(node => {
+      {data.allContentfulSection.nodes.map(node => {
+        {console.log(node)}
         return <Section key={node.section} node={node} />
       })}
     </Layout>
@@ -15,7 +17,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allContentfulHome {
+    allContentfulSection {
       nodes {
         section
         heading
@@ -29,6 +31,9 @@ export const query = graphql`
         detail {
           raw
         }
+        childContentfulSectionSectionItemsJsonNode {
+          targetPage
+        }       
       }
     }
   }
