@@ -1,3 +1,14 @@
 .sectionImage {
-  max-width: 300px;
+  max-width: 400px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.subSection {
+  padding: 10px;
 }
