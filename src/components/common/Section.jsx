@@ -27,9 +27,9 @@ export default function Section(props) {
         }
         <div className={sectionStyles.subSection}>
           {/* To allow full flexibility all fields are conditional so they are not mandated */}
-          <h1>{props.node.heading != 0 ? props.node.heading : null}</h1>
-          <h2>{props.node.subHeading != 0 ? props.node.subHeading : null}</h2>
-          {props.node.detail.raw != 0
+          <h1>{props.node.heading ? props.node.heading : null}</h1>
+          <h2>{props.node.subHeading ? props.node.subHeading : null}</h2>
+          {props.node.detail.raw
             ? documentToReactComponents(
                 JSON.parse(props.node.detail.raw),
                 options
