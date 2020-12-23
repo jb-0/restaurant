@@ -18,7 +18,6 @@ export default function Section(props) {
           props.node.image ? (
             <div className={sectionStyles.subSection}>
               <img
-                className={`${sectionStyles.sectionImage}`}
                 src={props.node.image.file.url}
                 alt={props.node.image.description}
               />

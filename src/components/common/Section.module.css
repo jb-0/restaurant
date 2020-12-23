@@ -1,11 +1,3 @@
-.sectionImage {
-  max-width: 100%;
-  max-height: 400px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .subSection {
   padding: 10px;
 }
@@ -16,9 +8,5 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  }
-
-  .sectionImage {
-    max-width: 450px;
   }
 }
