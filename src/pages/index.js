@@ -22,7 +22,8 @@ export const query = graphql`
         childContentfulSectionSectionItemsJsonNode: {
           targetPage: { eq: "home" }
         }
-      }
+      },
+      sort: {fields: section, order: ASC}
     ) {
       nodes {
         section

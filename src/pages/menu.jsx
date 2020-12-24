@@ -20,7 +20,8 @@ export const query = graphql`
         childContentfulSectionSectionItemsJsonNode: {
           targetPage: { eq: "menu" }
         }
-      }
+      },
+      sort: {fields: section, order: ASC}
     ) {
       nodes {
         section
