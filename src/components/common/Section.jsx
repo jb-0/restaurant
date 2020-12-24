@@ -2,8 +2,12 @@ import React from 'react'
 import sectionStyles from './Section.module.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { MARKS } from '@contentful/rich-text-types'
+import Menu from '../menu/Menu'
 
 export default function Section(props) {
+  // Given length of object ref, assign to a const to simplify referencing later
+  const pageProps = props.node.childContentfulSectionSectionItemsJsonNode
+
   const options = {
     renderMark: {
       [MARKS.CODE]: text => <div dangerouslySetInnerHTML={{ __html: text }} />,
@@ -34,6 +38,13 @@ export default function Section(props) {
                 options
               )
             : null}
+
+          {/* MENU specific handling, expectation is that items are provided however still using
+          conditional rendering just as a defensive measure, in case input is erroneous for e.g. */}
+          {pageProps.targetPage === 'menu' && pageProps.items ?
+          <Menu items={JSON.parse(pageProps.items)} />
+          : null}
+
         </div>
       </div>
       <hr></hr>
