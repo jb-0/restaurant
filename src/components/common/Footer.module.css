@@ -1,0 +1,13 @@
+.footerContainer { 
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0 4px 3px -3px var(--secondary-bg-color) inset;
+}
+
+.footerSection {
+  margin: 0 60px;
+}

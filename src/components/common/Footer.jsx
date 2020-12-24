@@ -20,24 +20,27 @@ export default function Footer() {
 
   return (
     <div className={footerStyles.footerContainer}>
-      <p>
-        Copyright © {yearPart}{' '}
-        <a href="https://www.jamiebarrett.co.uk">Jamie Barrett</a>
-      </p>
-      <p>Site Pages:</p>
-      <ul>
-        {data.allSitePage.nodes.map(node => {
-          if (
-            ['/dev-404-page/', '/404/', '/404.html'].indexOf(node.path) === -1
-          ) {
-            return (
-              <Link to={node.path}>
-                <li>{node.path}</li>
-              </Link>
-            )
-          }
-        })}
-      </ul>
+      <div className={footerStyles.footerSection}>
+        <p>
+          Copyright © {yearPart}{' '}
+          <a href="https://www.jamiebarrett.co.uk">Jamie Barrett</a>
+        </p>
+      </div>
+      <div className={footerStyles.footerSection}>
+        <ul>
+          {data.allSitePage.nodes.map(node => {
+            if (
+              ['/dev-404-page/', '/404/', '/404.html'].indexOf(node.path) === -1
+            ) {
+              return (
+                <Link to={node.path}>
+                  <li>{node.path}</li>
+                </Link>
+              )
+            }
+          })}
+        </ul>
+      </div>
     </div>
   )
 }
