@@ -38,9 +38,25 @@
   transition: transform 0.4s;
   transform: scale(1);
   margin: 0 30px;
+  display: inline-block;
 }
 
 .navCollapse .navLogo {
   transition: transform 0.4s;
   transform: scale(0.4);
+}
+
+@media(max-width: 800px) {
+  .navLogo {
+    display: none;
+  }
+
+  .nav {
+    height: 70px;
+  }
+
+  .navLink {
+    margin: 0 5px;
+    width: auto;
+  }
 }
