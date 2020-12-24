@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 :root {
   --main-bg-color: #f9f6f6;
@@ -12,10 +12,11 @@
 }
 
 body {
-  font-family: 'Italiana', serif;
+  font-family: 'Oswald', serif;
   margin: 0;
   color: var(--main-font-color);
   background-color: var(--main-bg-color);
+  letter-spacing: 1px
 }
 
 h1 {
