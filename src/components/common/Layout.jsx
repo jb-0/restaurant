@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
+import Footer from './Footer'
 import layoutStyles from './Layout.module.css'
 
 export default function Layout({ children }) {
@@ -9,6 +10,7 @@ export default function Layout({ children }) {
       <div className={layoutStyles.bodyContainer}>
         {children}
       </div>
+      <Footer />
     </>
   )
 }
