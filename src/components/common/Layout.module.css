@@ -3,9 +3,3 @@
   max-width: 1000px;
   padding: 0 1rem;
 }
-
-@media(max-width: 800px) {
-  .bodyContainer {
-    margin: 50px auto 200px auto;
-  }
-}
