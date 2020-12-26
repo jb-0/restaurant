@@ -20,7 +20,7 @@ export default function Nav() {
 
   return (
     <nav className={`${navStyles.nav} ${scrollPosition > 60 ? navStyles.navCollapse : null}`}>
-      <Link className={navStyles.navMobileLogo} to="/"><Logo /></Link>
+      <div className={navStyles.navMobileLogo}><Link to="/"><Logo /></Link></div>
       <div className={`${navStyles.navLinksAll} ${scrollPosition > 60 ? navStyles.navCollapse : null}`}>
         <Link className={`${navStyles.navLink} ${navStyles.navLinkLeft}`} to="/menu/">MENU</Link>
         <Link className={`${navStyles.navLink} ${navStyles.navLinkLeft}`} to="/order/">ORDER</Link>
