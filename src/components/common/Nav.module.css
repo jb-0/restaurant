@@ -46,7 +46,9 @@
 }
 
 .navCollapse .navMobileLogo {
-  display: none;
+  position: fixed;
+  top: -300px;
+  opacity: 0;
 }
 
 .navCollapse .navLogo {
@@ -64,6 +66,8 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
+    opacity: 1;
+    transition: opacity 1s;
   }
 
   .navLink {
