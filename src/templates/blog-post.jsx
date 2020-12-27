@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/common/layout"
+import Layout from "../components/common/Layout"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 export default function BlogPost({ data }) {
