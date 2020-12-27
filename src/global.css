@@ -24,6 +24,10 @@ h1 {
   color: var(--secondary-font-color);
 }
 
+small {
+  font-size: 1rem;
+}
+
 p, a {
   font-size: 1.3rem;
   color: var(--main-font-color);
