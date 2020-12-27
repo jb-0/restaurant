@@ -5,7 +5,6 @@ import Section from '../components/common/Section'
 import { v4 as uuidv4 } from 'uuid'
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       {data.allContentfulSection.nodes.map(node => {
