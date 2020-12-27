@@ -4,7 +4,7 @@ import uberEatsImage from '../../images/UberEats_Badge_Horizontal.png'
 
 export default function Order() {
   return (
-    <div className={orderStyles.orderContainer}>
+    <div>
       <h1>Order</h1>
       <p>Get our food delivered fresh to your door using UberEats</p>
       <a href="https://www.ubereats.com/london/food-delivery/italianrestaurant">
