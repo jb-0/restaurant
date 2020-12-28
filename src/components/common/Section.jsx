@@ -1,7 +1,7 @@
 import React from 'react'
 import sectionStyles from './Section.module.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { BLOCKS } from '@contentful/rich-text-types'
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import Menu from '../menu/Menu'
 
 export default function Section(props) {
