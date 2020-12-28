@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../components/common/Layout'
 import BlogCard from '../components/blog/BlogCard'
+import { v4 as uuidv4 } from 'uuid'
 
 const RecipePage = ({ data }) => {
   return (
@@ -9,7 +10,7 @@ const RecipePage = ({ data }) => {
       <h1>Blog</h1>
       <p>A place for recipes, information and whatever else! See below for a list of blogs.</p>
       {data.allContentfulBlog.nodes.map(node => {
-        return <BlogCard blog={node}/>
+        return <BlogCard key={uuidv4()}  blog={node}/>
       })}
     </Layout>
   )
