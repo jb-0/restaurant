@@ -1,7 +1,7 @@
 import React from 'react'
 import sectionStyles from './Section.module.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { MARKS } from '@contentful/rich-text-types'
+import { BLOCKS } from '@contentful/rich-text-types'
 import Menu from '../menu/Menu'
 
 export default function Section(props) {
@@ -13,11 +13,22 @@ export default function Section(props) {
     image,
     section,
     subHeading,
-  } = props.node;
+  } = props.node
 
   const options = {
-    renderMark: {
-      [MARKS.CODE]: text => <div dangerouslySetInnerHTML={{ __html: text }} />,
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) =>
+        node.content.some(
+          childNode =>
+            childNode.nodeType === `text` &&
+            childNode.marks.some(mark => mark.type === MARKS.CODE)
+        ) ? (
+          <div
+            dangerouslySetInnerHTML={{ __html: children[0].props.children }}
+          />
+        ) : (
+          <p>{children}</p>
+        ),
     },
   }
 
@@ -28,10 +39,7 @@ export default function Section(props) {
           /* If an image exists then render it */
           image ? (
             <div className={sectionStyles.subSection}>
-              <img
-                src={image.file.url}
-                alt={image.description}
-              />
+              <img src={image.file.url} alt={image.description} />
             </div>
           ) : null
         }
@@ -40,13 +48,10 @@ export default function Section(props) {
           <h1>{heading ? heading : null}</h1>
           <h2>{subHeading ? subHeading : null}</h2>
           {detail
-            ? documentToReactComponents(
-                JSON.parse(detail.raw),
-                options
-              )
+            ? documentToReactComponents(JSON.parse(detail.raw), options)
             : null}
 
-          {/* MENU specific handling, expectation is that items are provided however still using
+          {/* Menu specific handling, expectation is that items are provided however still using
           conditional rendering just as a defensive measure, in case input is erroneous for e.g. */}
           {pageProps.targetPage === 'menu' && pageProps.items ? (
             <Menu items={JSON.parse(pageProps.items)} />
