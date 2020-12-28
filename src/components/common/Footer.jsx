@@ -1,6 +1,7 @@
 import React from 'react'
 import footerStyles from './Footer.module.css'
 import { useStaticQuery, Link, graphql } from 'gatsby'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Footer() {
   const todaysDate = new Date()
@@ -33,7 +34,7 @@ export default function Footer() {
               ['/dev-404-page/', '/404/', '/404.html'].indexOf(node.path) === -1
             ) {
               return (
-                <Link to={node.path}>
+                <Link to={node.path} key={uuidv4()} >
                   <li>{node.path}</li>
                 </Link>
               )
