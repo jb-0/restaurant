@@ -1,48 +1,31 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Restaurant site
 
-## 🚀 Quick start
+This site was built using Gatsby, React and serves up content stored in Contentful CMS. This site includes a home page, menu and blog that can be updated via Contentful, including defining HTML elements such as buttons. The site is responsive and can be used as the basis for creating a real world restaurant site.
 
-1.  **Create a Gatsby site.**
+## Requirements
+You will need to have Node.js installed to run this project, please visit the node site for install
+instructions: https://nodejs.org/en/download/
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Installation
+Once you have NPM installed you can run the following shell commands to install this project:
+```
+git clone https://github.com/jb-0/restaurant.git
+cd restaurant
+npm install
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Environment variables
+For assigning environment variables in dev I opted to use https://www.npmjs.com/package/dotenv,
+however you can use your preferred approach to assigning environment variables. The project is
+configured to work with contentful, so if you wish to use as is you will supply the following
+from https://www.contentful.com/:
+- **CONTENTFUL_SPACE_ID** - The contentful space (where your content is stored)
+- **CONTENTFUL_ACCESS_TOKEN** - The secret used to authenticate to the space
 
-2.  **Start developing.**
+## Running the application
+To run the app you can execute the following commands in the project root directory:
+```
+gatsby develop
+```
 
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Using your preferred web browser you can navigate to localhost:8000 to view and use the app.
