@@ -58,7 +58,7 @@ export default function Section(props) {
           ) : null}
         </div>
       </div>
-      <hr></hr>
+      {props.lastEntry ? null : <hr></hr>}
     </>
   )
 }

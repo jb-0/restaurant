@@ -7,8 +7,16 @@ import { v4 as uuidv4 } from 'uuid'
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      {data.allContentfulSection.nodes.map(node => {
-        return <Section key={uuidv4()} node={node} />
+      {data.allContentfulSection.nodes.map((node, idx) => {
+        return (
+          <Section
+            key={uuidv4()}
+            node={node}
+            lastEntry={
+              data.allContentfulSection.nodes.length - 1 === idx ? true : false
+            }
+          />
+        )
       })}
     </Layout>
   )

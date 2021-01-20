@@ -6,8 +6,16 @@ import Section from '../components/common/Section'
 const MenuPage = ({ data }) => {
   return (
     <Layout>
-      {data.allContentfulSection.nodes.map(node => {
-        return <Section key={node.section} node={node} />
+      {data.allContentfulSection.nodes.map((node, idx) => {
+        return (
+          <Section
+            key={node.section}
+            node={node}
+            lastEntry={
+              data.allContentfulSection.nodes.length - 1 === idx ? true : false
+            }
+          />
+        )
       })}
     </Layout>
   )
